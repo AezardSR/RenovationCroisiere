@@ -1,0 +1,100 @@
+
+/*--------------------------Première slider------------------------------*/
+header h1 { 
+    font-size: 60px;
+    z-index: 1000;
+    position: absolute;
+    top: 40%;
+    left: 12%;
+    color: #095aaa;
+    text-shadow: 5px 5px 5px rgba(235, 225, 225, 0.637);
+}
+
+.logo { 
+    background: no-repeat center/55% url('../img/LA_MANU_CROISIERE.png');
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    z-index: 1001;
+  }
+
+#slide-1 {
+    background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url("../img/cruise-659924_1920.jpg");
+    background-position: bottom center;
+    height: 75vh;
+  }
+  #slide-2 {
+    background-image: linear-gradient(rgba(179, 175, 175, 0.068), rgba(0,0,0,.2)), url("../img/plage1.jpg");
+    background-position: center;
+    height: 75vh;
+  }
+  #slide-3 {
+    background-image: linear-gradient(rgba(161, 159, 159, 0.397), rgba(0,0,0,.2)), url("../img/cruise-ship-363804_1920.jpg");
+    background-position: center;
+    height: 75vh;
+  }
+  #slide-4 { 
+      background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url("../img/boattt.jpg");
+      background-position: 50% 80%;
+      height: 75vh;
+  }
+
+
+  /*-----------------------------Barre de recherche de date de croisière-------------------------------*/
+#BRV{
+    position: absolute;
+    bottom: 35%;
+}
+
+.BRVC{
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #003468;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+.BRVC input{
+    margin-top: 2%;
+}
+#RechercheButton{
+    color: white;
+    background-color: #003468;
+    border: none;
+    border-radius: 4px;
+}
+
+
+  /*-----------------------------deuxième slider--------------------------------------*/
+  #slided2-1{
+    background-image: url(../img/maldives-1993704_1920.jpg);
+    height: 40vh;
+    background-size: cover;
+    background-position: center 40%;
+  }
+  
+  
+  #slided2-2{
+    background-image: url(../img/restaurant-358238_1920.jpg);
+    height: 40vh;
+    background-size: cover;
+    background-position: center 30%;
+  }
+  
+  #slided2-3{
+    background-image: url(../img/gambling-602976_1920.jpg);
+    height: 40vh;
+    background-size: cover;
+    background-position: center 40%;
+  }
+  
+  #slided2-4{
+    background-image: url(../img/sea-931164_1920.jpg);
+    height: 40vh;
+    background-position: cover;
+    background-position: center 40;
+  }
+
+  @media screen and (max-width: ) {
+      
+  }

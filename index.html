@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="l">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <link rel="stylesheet" href="asset/css/style.css">
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="asset/css/styleRénovation.css">
     <script src="https://kit.fontawesome.com/175fa63f91.js" crossorigin="anonymous"></script>
     <title>LA MANU-CROISIÈRE</title>
 </head>
@@ -40,27 +41,39 @@
               </div>
         </div>
         <h1>Voyagez avec le Manuela</h1>
-        <div id="mbi-container" class="d-flex justify-content-center">
-            <div id="mbid1">
-                <div class="mb1"></div>
-                <div class="mb2">
-                    <p><i class="fas fa-map-marker-alt"></i> Où souhaitez-vous aller ?</p>
-                </div>
-                <div class="mb3">
-                    <p><i class="far fa-calendar-alt"></i> Quand ?</p>
-                </div>
-                <div class="mb4">
-                    <p><i class="fas fa-user-friends"></i> Qui part avec vous ?</p>
-                </div>
-                <a href="#" class="action-button"><i class="fas fa-search-location"></i> Rechercher</a>
-    
-            </div>
+        <!-------------boutton moche------------->
+        <div id="BRV" class="w-100 d-none d-md-block ">
+            <form action="choixVoyage" id="choixVoyage" class=" d-flex justify-content-center">
+                    <div id="BRV1" class="col-2 BRVC">
+                        <label for="destination"><i class="fas fa-map-marker-alt"></i> Où souhaitez-vous aller ?</label>
+                        <input name="color" id="destination" class="w-75" list="destinations">
+                    </div>
+                    <div id="BRV2"  class="col-2 mx-4 BRVC">
+                        <label for="date"><i class="far fa-calendar-alt"></i> Quand ?</label>
+                        <input type="date" name="date" class="w-75">
+                    </div>
+                    <div class="col-2 BRVC">
+                        <label for="combien"><i class="fas fa-user-friends"></i> Qui part avec vous ?</label>
+                        <input type="number" name="combien" class="w-75">
+                        
+                    </div>
+                    <div class="col-1"></div>
+                    <div class="col-2">
+                        <button id="RechercheButton" type="submit" class="w-100 h-100"><i class="fas fa-search-location"></i> Rechercher</button>
+                    </div>
+            </form>
         </div>
+
+        <datalist id="destinations">
+            <option>Barcelone</option>
+            <option>Venise</option>
+            <option>Nice</option>
+        </datalist>
     </header>
 
 <!--mise en place de la barre nav simple avec un dropdown menu ou il y aura des faux links à l'intérieur-->
 <nav>
-    <div class="imgnavigation"><img src="asset/img/liste2.png" alt="liste menu burger pour la navigation"></div>
+    <div class="imgnavigation"></div>
     <div class="dropdown">
           <a href="javascript:void(0)" class="dropbtn">Accueil <i class="fas fa-angle-down"></i></a>
           <div class="dropdown-content">
