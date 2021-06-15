@@ -47,8 +47,8 @@ header h1 {
     font-size: 60px;
     z-index: 1000;
     position: absolute;
-    top: 200px;
-    left: 180px;
+    top: 40%;
+    left: 12%;
     color: #095aaa;
     text-shadow: 5px 5px 5px rgba(235, 225, 225, 0.637);
 }
@@ -76,49 +76,28 @@ header h1 {
       background:rgb(233, 226, 226);
   }
   
-  .slide {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 100%;
-    z-index: 10;
-    padding: 8em 1em 0;
-    background-size: cover;
-    transition: left 0s .75s;
-  }
-  
-  [id^="slide"]:checked + .slide {
-    left: 0;
-    z-index: 100;
-    transition: left .78s ease-out;
-  }
-  
-  .slider-container{
-    height: 400px;
-    width: 100%;
-    margin: auto;
-    position: relative;
-    overflow: hidden; 
-    text-align: center;
-  }
+
 /* ce block de slide représente les images contenu dans le 1er slider*/
 
-  .slide-1 {
+  #slide-1 {
     background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url("../img/cruise-659924_1920.jpg");
-    background-position: bottom;
+    background-position: bottom center;
+    height: 75vh;
   }
-  .slide-2 {
+  #slide-2 {
     background-image: linear-gradient(rgba(179, 175, 175, 0.068), rgba(0,0,0,.2)), url("../img/plage1.jpg");
     background-position: center;
+    height: 75vh;
   }
-  .slide-3 {
+  #slide-3 {
     background-image: linear-gradient(rgba(161, 159, 159, 0.397), rgba(0,0,0,.2)), url("../img/cruise-ship-363804_1920.jpg");
     background-position: center;
+    height: 75vh;
   }
-  .slide-4 { 
+  #slide-4 { 
       background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url("../img/boattt.jpg");
-      background-position: bottom;
+      background-position: 50% 80%;
+      height: 75vh;
   }
 
 /* préparation de la barre de navigation avant le dropdown menu*/
@@ -197,37 +176,36 @@ nav img {
   }
 
 /*slider numéro 2 contenant les images des activités mise en place*/
-.sliderd2 { 
-  width: 1350px;
-  height: 450px;
-  background: url(../img/sea-931164_1920.jpg);
+#slided2-1{
+  background-image: url(../img/maldives-1993704_1920.jpg);
+  height: 40vh;
   background-size: cover;
-  margin: auto;
-  animation: slide 20s infinite;
-  border: 2px solid black;
-  border-radius: 5px;
-}
-@keyframes slide{ 
-  25%{
-    background: url(../img/maldives-1993704_1920.jpg);
-    background-size: cover;
-  }
-  50%{
-    background: url(../img/restaurant-358238_1920.jpg);
-    background-size: cover;
-  }
-  75%{
-    background: url(../img/gambling-602976_1920.jpg);
-    background-size: cover;
-  }
-  100%{
-    background: url(../img/sea-931164_1920.jpg);
-    background-size: cover;
-  }
-  
+  background-position: center 40%;
 }
 
-  /* début de l'agencement de la box contenant les artciles sur la cure thermale*/
+
+#slided2-2{
+  background-image: url(../img/restaurant-358238_1920.jpg);
+  height: 40vh;
+  background-size: cover;
+  background-position: center 30%;
+}
+
+#slided2-3{
+  background-image: url(../img/gambling-602976_1920.jpg);
+  height: 40vh;
+  background-size: cover;
+  background-position: center 40%;
+}
+
+#slided2-4{
+  background-image: url(../img/sea-931164_1920.jpg);
+  height: 40vh;
+  background-position: cover;
+  background-position: center 40%;
+}
+
+  /* début de l'agencement de la box contenant les artciles sur la cure thermale */
  
   #imagethermal{
       background-image: url(../img/detente.jpg);
@@ -493,6 +471,8 @@ nav img {
 /*MISE EN PLACE DE LA BARRE DE RECHERCHE ET DU BOUTON AVEC LES 4 BLOCS*/
 #mbid1{
   display: grid;
+  position: absolute;
+  top: 55%;
   grid-template-columns: 100px 100px 100px 100px;  /*branche principale*/
   grid-template-rows: 1fr;
   grid-column-gap: 40px;

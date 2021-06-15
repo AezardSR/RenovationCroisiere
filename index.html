@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="l">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="asset/css/style.css">
     <script src="https://kit.fontawesome.com/175fa63f91.js" crossorigin="anonymous"></script>
     <title>LA MANU-CROISIÈRE</title>
@@ -13,30 +14,48 @@
 <!--confection du header avec les images qui sont présentent en css et le "menu" qui est la div contenant les boutons permettant de switch les images dans le slider-->
     <header>
         <div class="logo"></div>
-            <div class="slider-container">
-            <div class="menu">
-              <label for="slide-dot-1"></label>
-              <label for="slide-dot-2"></label>
-              <label for="slide-dot-3"></label>
-              <label for="slide-dot-4"></label>
-            </div>
-<!--préparation du gradiant pour les images afin de modifier l'opacité ( la div id=color ne sert à rien , non utilisé dans le css)-->
-            <div id="color">
-                <input id="slide-dot-1" type="radio" name="slides" checked>
-                 <div class="slide slide-1"></div>
-            
-                <input id="slide-dot-2" type="radio" name="slides">
-                <div class="slide slide-2"></div>
-            
-                <input id="slide-dot-3" type="radio" name="slides">
-                <div class="slide slide-3"></div>
-
-                <input id="slide-dot-4" type="radio" name="slides">
-                <div class="slide slide-4"></div>
-              
-            </div>
+        <!-------nouveau slider en bootstrap------->
+        <div id="" class="container-exp">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                <div  class="carousel-inner">
+                  <div id="slide-1" class="carousel-item active">
+                  </div>
+                  <div id="slide-2" class="carousel-item">
+                  </div>
+                  <div id="slide-3" class="carousel-item">
+                  </div>
+                  <div id="slide-4" class="carousel-item">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                </button>
+              </div>
         </div>
         <h1>Voyagez avec le Manuela</h1>
+        <div id="mbi-container" class="d-flex justify-content-center">
+            <div id="mbid1">
+                <div class="mb1"></div>
+                <div class="mb2">
+                    <p><i class="fas fa-map-marker-alt"></i> Où souhaitez-vous aller ?</p>
+                </div>
+                <div class="mb3">
+                    <p><i class="far fa-calendar-alt"></i> Quand ?</p>
+                </div>
+                <div class="mb4">
+                    <p><i class="fas fa-user-friends"></i> Qui part avec vous ?</p>
+                </div>
+                <a href="#" class="action-button"><i class="fas fa-search-location"></i> Rechercher</a>
+    
+            </div>
+        </div>
     </header>
 
 <!--mise en place de la barre nav simple avec un dropdown menu ou il y aura des faux links à l'intérieur-->
@@ -66,28 +85,31 @@
 
     </div>
 
+    <div class="container">
+        <div class="col">
+            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                <div id="slided2-1" class="carousel-item active">
+                </div>
+                <div id="slided2-2" class="carousel-item">
+                </div>
+                <div id="slided2-3" class="carousel-item">
+                </div>
+                <div id="slided2-4" class="carousel-item">
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 <!--mise en place du 2eme slider qui contiendra les photos des différentes activités-->
-<section class="sliderd2"></section>
  <!--blblblbl slider numéro 2 avec les autres images concernant les activités-->
     <!--IL N Y A PAS BESOIN D'IMAGE EN HTML CAR JE SUIS UN BOSS LALALALAALALA ACCLAMEZ MOI-->
 
 <!--dernier élément rajouté à la derniere minute-->
  <div id="disparition"><h1 class="mbh1">Réservez votre croisière</h1></div> 
 
-    <div id="mbid1">
-        <div class="mb1"></div>
-        <div class="mb2">
-            <p><i class="fas fa-map-marker-alt"></i> Où souhaitez-vous aller ?</p>
-        </div>
-        <div class="mb3">
-            <p><i class="far fa-calendar-alt"></i> Quand ?</p>
-        </div>
-        <div class="mb4">
-            <p><i class="fas fa-user-friends"></i> Qui part avec vous ?</p>
-        </div>
-        <a href="#" class="action-button"><i class="fas fa-search-location"></i> Rechercher</a>
 
-    </div>
 
 
 
@@ -315,5 +337,7 @@
     </div>
     
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
 </html>
