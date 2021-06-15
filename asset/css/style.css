@@ -281,31 +281,7 @@ nav img {
 }
 
 /* mise en place de la partie contenant les services qui sont à bord du manuela*/
-#services { 
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  padding-top: 50px;
-  margin-left: 90px;
-}
-#services i { 
-  font-size: 50px;
-  color: #003468;
-}
-.h2service { 
-  padding-top: 70px;
-}
-.repas i {
-  margin-left: 50px;
- }
-.securite i { 
-  margin-left: 50px;
-}
-.sport i {
-  margin-left: 40px;
-}
-.divertissement i { 
-  margin-left: 43px;
-}
+
 /* mise en place du formulaire a 22H10 avant la douche wazzaaaaaa*/
 /*ps : pensez à tuer anthony demain*/
 
