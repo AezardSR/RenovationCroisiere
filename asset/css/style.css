@@ -1,0 +1,944 @@
+/* début de la mise en page en faisant le slider avec les images*/
+
+html, body {
+    width: 100%;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgba(228, 225, 225, 0.205);
+  }
+  legend { 
+    font-size: 21px;
+    font-weight: bold;
+    color: #095aaa;
+  }
+  .logo { 
+    background: no-repeat center/55% url('../img/LA_MANU_CROISIERE.png');
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    z-index: 1001;
+  }
+    /* ceci est la légende de l'introduction*/
+
+    #first{
+      padding: 10px;
+      color: #095aaa;
+  }
+  h2{
+      text-align: center;
+      color: #095aaa;
+      font-style: italic;
+  
+  }
+
+  /* définition de la taille des images qui seront présente dans le header*/
+
+  img {
+    max-width: 100%;
+  }
+  /* définition d'une taille pour le header pour éviter qu'il ne s'adapter au images présente dans le header et ainsi éviter les problèmes de taille*/
+
+  header { 
+    height: 70%;
+ }
+
+ /* intégration du h1 dans le header*/
+header h1 { 
+    font-size: 60px;
+    z-index: 1000;
+    position: absolute;
+    top: 200px;
+    left: 180px;
+    color: #095aaa;
+    text-shadow: 5px 5px 5px rgba(235, 225, 225, 0.637);
+}
+
+/* mise en place des position et du "menu" qui sont en fait les boutons permettant de switch les images présentent dans le header*/
+
+.menu {
+    position: absolute;
+    left: 0;
+    z-index: 900;
+    width: 100%;
+    bottom: 0;
+  }
+  
+  .menu label {
+    cursor: pointer;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: rgb(83, 79, 79);
+    border-radius: 50px;
+    margin: 0 .2em 1em;
+  }
+  .menu label:hover { 
+      background:rgb(233, 226, 226);
+  }
+  
+  .slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    z-index: 10;
+    padding: 8em 1em 0;
+    background-size: cover;
+    transition: left 0s .75s;
+  }
+  
+  [id^="slide"]:checked + .slide {
+    left: 0;
+    z-index: 100;
+    transition: left .78s ease-out;
+  }
+  
+  .slider-container{
+    height: 400px;
+    width: 100%;
+    margin: auto;
+    position: relative;
+    overflow: hidden; 
+    text-align: center;
+  }
+/* ce block de slide représente les images contenu dans le 1er slider*/
+
+  .slide-1 {
+    background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url("../img/cruise-659924_1920.jpg");
+    background-position: bottom;
+  }
+  .slide-2 {
+    background-image: linear-gradient(rgba(179, 175, 175, 0.068), rgba(0,0,0,.2)), url("../img/plage1.jpg");
+    background-position: center;
+  }
+  .slide-3 {
+    background-image: linear-gradient(rgba(161, 159, 159, 0.397), rgba(0,0,0,.2)), url("../img/cruise-ship-363804_1920.jpg");
+    background-position: center;
+  }
+  .slide-4 { 
+      background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url("../img/boattt.jpg");
+      background-position: bottom;
+  }
+
+/* préparation de la barre de navigation avant le dropdown menu*/
+
+nav {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #003468;
+    border-top: 1px solid white;
+    border-bottom: white 2px solid;
+  }
+  /*suppression du menu burger dans la navigation en grand écran*/
+nav img { 
+  display: none;
+}
+
+ a { 
+      font-size: 22px;
+      margin-left: 5rem;
+      padding-right: 1rem;
+  }
+
+ a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+ a:hover, .dropdown:hover .dropbtn {
+    background-color: #095aaabe;
+  }
+  
+.dropdown {
+    display: inline-block;
+  }
+
+/* préparation du dropdown menu dans la barre de navigation*/
+
+.dropdown-content {
+    display: none; /* pour faire disparaitre le contenu du dropdown quand la souris n'est pas dessus*/
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    margin: 10px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 15px;
+  }
+  /* création du background dans le hover pour pouvoir avoir de la visiblité dans le dropdown menu*/
+  .dropdown-content a:hover {background-color: #095aaabe}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  /* début de l'introduction avec le paragraphe et la legende*/
+
+  #introduction{ 
+      padding: 25px;
+      margin-left: 0%;
+      font-size: 22px;
+      text-align: center;
+  }
+  #first { 
+    font-weight: bold;
+    font-size: 25px ;
+  }
+
+/*slider numéro 2 contenant les images des activités mise en place*/
+.sliderd2 { 
+  width: 1350px;
+  height: 450px;
+  background: url(../img/sea-931164_1920.jpg);
+  background-size: cover;
+  margin: auto;
+  animation: slide 20s infinite;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+@keyframes slide{ 
+  25%{
+    background: url(../img/maldives-1993704_1920.jpg);
+    background-size: cover;
+  }
+  50%{
+    background: url(../img/restaurant-358238_1920.jpg);
+    background-size: cover;
+  }
+  75%{
+    background: url(../img/gambling-602976_1920.jpg);
+    background-size: cover;
+  }
+  100%{
+    background: url(../img/sea-931164_1920.jpg);
+    background-size: cover;
+  }
+  
+}
+
+  /* début de l'agencement de la box contenant les artciles sur la cure thermale*/
+ 
+  #imagethermal{
+      background-image: url(../img/detente.jpg);
+      background-size: cover;
+      height: 200px;
+      width: auto;
+  }
+  #imagehuile{
+      background-image: url(../img/massage.jpg);
+      background-size: cover;
+      height: 200px;
+      width: auto;
+  }
+  #imagedetente{
+      background-image: url(../img/serviette.jpg);
+      background-size: cover;
+      height: 200px;
+      width: auto;
+  }
+  .articles{
+      text-align: center;
+      display: grid;
+      grid-template-rows: 350px;
+      grid-template-columns: repeat(3, 1fr);
+      width: 93%;
+      border: 3px solid #003468;
+      grid-gap: 10px;
+      margin-right:auto;
+      margin-left: auto;
+  }
+  .h2paul { 
+    margin-top: 65px;
+  }
+ 
+  /* voici le bloc nommé articles2 contenant la partie sur la partie artistique avec l'opéra et le théâtre*/
+
+  .articles2{
+    text-align: center;
+    display: grid;
+    grid-template-rows: 350px;
+    grid-template-columns: repeat(3, 1fr);
+    width: 93%;
+    border: 3px solid #003468;
+    grid-gap: 10px;
+    margin-right:auto;
+    margin-left: auto;
+}
+/* ce bloc contient les images de l'articles2 */
+#imagetheatre { 
+  background-image: url(../img/auditorium-86197_1920.jpg);
+  background-size: cover;
+  height: 200px;
+  width: auto;
+}
+#imageopera { 
+  background-image: url(../img/opera-594592_1920.jpg);
+  background-size: cover;
+  height: 200px;
+  width: auto;
+}
+#imageorchestre { 
+  background-image: url(../img/violins-1838390_1920.jpg);
+  background-size: cover;
+  height: 200px;
+  width: auto;
+}
+/*voici la partie articles3 contenant les activités sportives*/
+
+.articles3{
+  text-align: center;
+  display: grid;
+  grid-template-rows: 350px;
+  grid-template-columns: repeat(3, 1fr);
+  width: 93%;
+  border: 3px solid #003468;
+  grid-gap: 10px;
+  margin-right:auto;
+  margin-left: auto;
+}
+/* ce bloc contient les images de l'articles3*/
+#imageaquagyme {
+  background-image: url(../img/aquagym.jpg);
+  background-size: cover;
+  height: 200px;
+  width: auto;
+}
+#imagesallesport {
+  background-image: url(../img/salle-de-sport.jpg);
+  background-size: cover;
+  height: 200px;
+  width: auto;
+}
+#imagezumba{
+  background-image: url(../img/danse.jpg);
+  background-size: cover;
+  height: 200px;
+  width: auto;
+}
+
+
+/*et enfin voici la partie 4 contenant les articles sur les parties de jeux dans le casino*/ 
+
+.mango4{
+  text-align: center;
+  display: grid;
+  grid-template-rows: 350px;
+  grid-template-columns: repeat(3, 1fr);
+  width: 93%;
+  border: 3px solid #003468;
+  grid-gap: 10px;
+  margin-right:auto;
+  margin-left: auto;
+}
+
+/*voici la partie contenant les images de la derniere partie*/
+
+#imagehasard {
+  background-image: url(../img/roulette.jpg);
+  background-size: cover;
+  height: 200px;
+      width: auto;
+}
+#imagesous {
+  background-image: url(../img/gambling-602976_1920.jpg);
+  background-size: cover;
+  height: 200px;
+      width: auto;
+}
+#imagecarte {
+  background-image: url(../img/cartecasino.jpg);
+  background-size: cover;
+  height: 200px;
+      width: auto;
+}
+
+/* mise en place de la partie contenant les services qui sont à bord du manuela*/
+#services { 
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding-top: 50px;
+  margin-left: 90px;
+}
+#services i { 
+  font-size: 50px;
+  color: #003468;
+}
+.h2service { 
+  padding-top: 70px;
+}
+.repas i {
+  margin-left: 50px;
+ }
+.securite i { 
+  margin-left: 50px;
+}
+.sport i {
+  margin-left: 40px;
+}
+.divertissement i { 
+  margin-left: 43px;
+}
+/* mise en place du formulaire a 22H10 avant la douche wazzaaaaaa*/
+/*ps : pensez à tuer anthony demain*/
+
+.formul { 
+  margin-top: 50px;
+  border: black 3px solid;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto; 
+  background-color:#095aaabe;
+  border-radius: 15px;
+}
+.formul h2 { 
+  font-size: 20px;
+  padding-left: 50px;
+  color: white;
+}
+
+
+  form div + div {
+    margin-top: 1em;
+  }
+
+  label {
+    /* Pour être sûrs que toutes les étiquettes ont même taille et sont correctement alignées */
+    display: inline-block;
+    width: 145px;
+    text-align: right;
+    color: white;
+  }
+
+  input, textarea {
+    /* Pour s'assurer que tous les champs texte ont la même police.
+       Par défaut, les textarea ont une police monospace */
+    font: 1em sans-serif;
+
+    /* Pour que tous les champs texte aient la même dimension */
+    width: 300px;
+    box-sizing: border-box;
+
+    /* Pour harmoniser le look & feel des bordures des champs texte */
+    border: 3px solid white;
+  }
+
+  input:focus, textarea:focus {
+    /* Pour souligner légèrement les éléments actifs */
+    border-color: #000;
+  }
+
+  textarea {
+    /* Pour aligner les champs texte multi‑ligne avec leur étiquette */
+    vertical-align: top;
+
+    /* Pour donner assez de place pour écrire du texte */
+    height: 5em;
+  }
+
+  .button {
+    /* Pour placer le bouton à la même position que les champs texte */
+    padding-left: 90px; /* même taille que les étiquettes */
+  }
+
+  button {
+    /* Cette marge supplémentaire représente grosso modo le même espace que celui
+       entre les étiquettes et les champs texte */
+    margin-left: 250px;
+  }
+
+/*mise en place du contenu du footer avec les icones de réseaux sociaux les mentions légal etc*/
+#findevie { 
+  background-color:#003468;
+  border-top: black solid 2px;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, auto);
+}
+#findevie { 
+  font-size: 22px;
+  color: white;
+}
+#reseaux { 
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-row: 2;
+}
+#reseaux i {
+  font-size: 45px;
+  margin-left: 5px;
+  color: white;
+
+}
+
+#logoeddy{ 
+  background:no-repeat center/55% url(../img/LA_MANU_CROISIERE.png);
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  right: 10px;
+
+}
+/*MISE EN PLACE DE LA BARRE DE RECHERCHE ET DU BOUTON AVEC LES 4 BLOCS*/
+#mbid1{
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px;  /*branche principale*/
+  grid-template-rows: 1fr;
+  grid-column-gap: 40px;
+}
+.mbh1 { 
+  margin-top: 50px;
+  color:#095aaa ;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+#mbid1 p { 
+  text-align: center;
+  color: white;
+}
+
+.mb2{
+  grid-column: 1/3;           /*ou souhaitez vous aller ?*/
+  grid-row: 3/4;
+  border:solid #095aaa ;
+  background-color: #003468;
+  border-radius: 5px;
+}
+
+.mb3{
+  grid-column: 3/5;
+  grid-row: 3/4;             /*Quand ?*/
+  border:solid#095aaa ;
+  background-color: #003468;
+  border-radius: 5px;
+}
+
+.mb4{
+  grid-column: 5/7;            /*Qui part avec vous */
+  grid-row: 3/4;
+  border:solid #095aaa ;
+  background-color: #003468;
+  border-radius: 5px;
+}
+
+.mbh1{
+  grid-column: 1/3;    /*Gros titre*/
+}
+
+.action-button{
+  grid-column: 7/9;
+  grid-row: 3/4;
+  border-radius: 10px;
+  font-family: 'Pacifico', cursive;
+  font-size: 25px;
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #003468;
+  border-bottom: 5px solid #095aaa ;
+  transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+
+}
+
+.action-button:active{
+  transform: translate(0px,5px);
+  -webkit-transform: translate(0px,5px);
+  border-bottom: 1px solid;
+}
+
+@media screen and (max-width: 1024px) { 
+  /*mettre le titre h1 en responsive*/
+  header h1 { 
+    font-size: 35px;
+    z-index: 1000;
+    position: absolute;
+    top: 200px;
+    left: 110px;
+    color: #095aaa;
+    text-shadow: 5px 5px 5px rgba(235, 225, 225, 0.637);
+}
+/* mise en place du responsive de la nav barre*/
+nav img {
+  display: block;
+  width: auto;
+  margin-left:auto;
+  margin-right: auto;
+  height: 100px;
+}
+a, .dropbtn {
+  display: inline-block;
+  display: none;
+  text-decoration: none;
+}
+
+a:hover, .dropdown:hover .dropbtn {
+  display: flex;
+  display: none;
+}
+
+.dropdown {
+  display: inline-block;
+  display: none;
+}
+/*mise en place de la slide bar numéro 2 en responsive*/
+.sliderd2 { 
+  width: auto;
+  height: 300px;
+  background: url(../img/sea-931164_1920.jpg);
+  background-size: cover;
+  margin: auto;
+  animation: slide 20s infinite;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+/*mise en place du reponsive formulaire*/
+.formul { 
+  margin-top: 50px;
+  border: black 3px solid;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color:#095aaabe;
+  border-radius: 15px;
+}
+/*mise en place du reponsive pour le footer*/
+#findevie { 
+  background-color:#003468;
+  border-top: black solid 2px;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, auto);
+}
+#findevie { 
+  font-size: 15px;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*mise en place du logo par rapport au footer*/
+#logoeddy{ 
+  background:no-repeat center/55% url(../img/LA_MANU_CROISIERE.png);
+  width: 100px;
+  height: 100px;
+  position: relative;
+  margin-left: 20px;
+  right: 10px;
+
+}
+/*definition de la taille des h2 en responsive*/
+h2 { 
+  font-size: 18px;
+}
+/*definition de la taille des legendes*/
+legend { 
+  font-size: 15px;
+  font-weight: bold;
+}
+p { 
+  font-size: 11px;
+}
+/*mise en place du responsive au niveaux des icones de services du navire*/
+#reseaux i {
+  font-size: 35px;
+  margin-left: 10px;
+  color: white;
+
+}
+#services { 
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.securite i { 
+  margin-left: 20px;
+}
+.repas i {
+  margin-left: 35px;
+ }
+ #mbid1 { 
+  display: none;
+}
+#disparition { 
+  display: grid;
+  display: none;
+}
+
+}
+@media screen and (max-width: 600px) {
+
+  /*mise en place du reponsive sur telephone*/
+  nav img {
+    display: flex;
+    width: auto;
+    margin-left: 200px;
+    height: 100px;
+  }
+  .formul { 
+    margin-top: 50px;
+    border: black 2px solid;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto; 
+    background-color:#095aaabe;
+    border-radius: 15px;
+  }
+  .formul h2 { 
+    font-size: 10px;
+    padding-left: 50px;
+    color: white;
+  }
+  
+  
+    form div + div {
+      margin-top: 1em;
+    }
+  
+    label {
+      /* Pour être sûrs que toutes les étiquettes ont même taille et sont correctement alignées */
+      display: inline-block;
+      width: 145px;
+      text-align: right;
+      color: white;
+      font-size: 10px;
+    }
+  
+    input, textarea {
+      /* Pour s'assurer que tous les champs texte ont la même police.
+         Par défaut, les textarea ont une police monospace */
+      font: 1em sans-serif;
+  
+      /* Pour que tous les champs texte aient la même dimension */
+      width: 100px;
+      height: 10px;
+      box-sizing: border-box;
+  
+      /* Pour harmoniser le look & feel des bordures des champs texte */
+      border: 3px solid white;
+    }
+  
+    input:focus, textarea:focus {
+      /* Pour souligner légèrement les éléments actifs */
+      border-color: #000;
+    }
+  
+    textarea {
+      /* Pour aligner les champs texte multi‑ligne avec leur étiquette */
+      vertical-align: top;
+  
+      /* Pour donner assez de place pour écrire du texte */
+      height: auto;
+    }
+
+    button {
+      /* Cette marge supplémentaire représente grosso modo le même espace que celui
+         entre les étiquettes et les champs texte */
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+  /*modification de la legende*/
+  legend { 
+    font-size: 12.5px;
+    font-weight: bold;
+  }
+  p { 
+    font-size: 8px;
+  }
+  #mbid1 { 
+    display: none;
+  }
+  #disparition { 
+    display: grid;
+    display: none;
+  }
+/*modification du footer en telephone*/
+#logoeddy{ 
+  background:no-repeat center/55% url(../img/LA_MANU_CROISIERE.png);
+  width: 50px;
+  height: 80px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  right: 10px;
+}
+/*reseaux sociaux taille modification*/
+#reseaux i {
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+
+}
+/*modification de la taille des icones du footer*/
+#findevie { 
+  font-size: 9px;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*modification du h2 en reponsive mobile*/
+.h2service { 
+  font-size: 12px;
+}
+/*disparition des icones qui dérange pour scotché son site*/
+
+/*modification des services*/
+#services i { 
+  font-size: 15px;
+}
+#services {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*modification du slider*/
+.sliderd2 { 
+  width: 350px;
+  height: 200px;
+  background: url(../img/sea-931164_1920.jpg);
+  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
+  animation: slide 20s infinite;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.articles{
+  text-align: center;
+  display: grid;
+  grid-template-rows: 270px;
+  grid-template-columns: repeat(3, 1fr);
+  width: 90%;
+  border: 2px solid #003468;
+  grid-gap: 5px;
+  margin-right:auto;
+  margin-left: auto;
+}
+#imagethermal{
+  background-image: url(../img/detente.jpg);
+  background-size: cover;
+  height: 140px;
+  width: auto;
+}
+#imagehuile{
+  background-image: url(../img/massage.jpg);
+  background-size: cover;
+  height: 140px;
+  width: auto;
+}
+#imagedetente{
+  background-image: url(../img/serviette.jpg);
+  background-size: cover;
+  height: 140px;
+  width: auto;
+}
+/*modification des autres articles pour le responsive mobile*/
+.articles2{
+  text-align: center;
+  display: grid;
+  grid-template-rows: 270px;
+  grid-template-columns: repeat(3, 1fr);
+  width: 90%;
+  border: 2px solid #003468;
+  grid-gap: 5px;
+  margin-right:auto;
+  margin-left: auto;
+}
+/* ce bloc contient les images de l'articles2 */
+#imagetheatre { 
+  background-image: url(../img/auditorium-86197_1920.jpg);
+  background-size: cover;
+  height: 140px;
+  width: auto;
+}
+#imageopera { 
+  background-image: url(../img/opera-594592_1920.jpg);
+  background-size: cover;
+  height: 140px;
+  width: auto;
+}
+#imageorchestre { 
+  background-image: url(../img/violins-1838390_1920.jpg);
+  background-size: cover;
+  height: 140px;
+  width: auto;
+}
+
+.articles3{
+  text-align: center;
+  display: grid;
+  grid-template-rows: 270px;
+  grid-template-columns: repeat(3, 1fr);
+  width: 90%;
+  border: 2px solid #003468;
+  grid-gap: 5px;
+  margin-right:auto;
+  margin-left: auto;
+}
+/* ce bloc contient les images de l'articles3*/
+#imageaquagyme {
+  background-image: url(../img/aquagym.jpg);
+  background-size: cover;
+  height: 140px;
+  width: auto;
+}
+#imagesallesport {
+  background-image: url(../img/salle-de-sport.jpg);
+  background-size: cover;
+  height: 140px;
+  width: auto;
+}
+#imagezumba{
+  background-image: url(../img/danse.jpg);
+  background-size: cover;
+  height: 140px;
+  width: auto;
+}
+.mango4{
+  text-align: center;
+  display: grid;
+  grid-template-rows: 270px;
+  grid-template-columns: repeat(3, 1fr);
+  width: 90%;
+  border: 2px solid #003468;
+  grid-gap: 5px;
+  margin-right:auto;
+  margin-left: auto;
+}
+/*voici la partie contenant les images de la derniere partie*/
+
+#imagehasard {
+  background-image: url(../img/roulette.jpg);
+  background-size: cover;
+  height: 140px;
+  width: auto;
+}
+#imagesous {
+  background-image: url(../img/gambling-602976_1920.jpg);
+  background-size: cover;
+  height: 140px;
+  width: auto;
+}
+#imagecarte {
+  background-image: url(../img/cartecasino.jpg);
+  background-size: cover;
+  height: 140px;
+  width: auto;
+}
+
+}
