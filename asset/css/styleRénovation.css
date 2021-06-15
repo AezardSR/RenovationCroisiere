@@ -1,4 +1,11 @@
 
+html, body {
+  width: 100%;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rgba(228, 225, 225, 0.205);
+}
+
 /*--------------------------Première slider------------------------------*/
 header h1 { 
     font-size: 55px;
@@ -101,12 +108,6 @@ header h1 {
   }
 
   /*------------------Icon bas de page--------------------*/
-  #services { 
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    padding-top: 50px;
-    margin-left: 90px;
-  }
   #services i { 
     font-size: 50px;
     color: #003468;
