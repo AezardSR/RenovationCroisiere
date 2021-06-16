@@ -10,6 +10,7 @@ html, body {
 header h1 { 
     font-size: 55px;
     z-index: 1000;
+    font-weight: bold;
     position: absolute;
     top: 40%;
     left: 12%;
@@ -52,7 +53,11 @@ header h1 {
 
 
   /*-----------------------------Barre de recherche de date de croisière-------------------------------*/
-#BRV{
+
+#RechercheButton, #RechercheButton i{
+  font-size: 25px;
+}
+  #BRV{
     position: absolute;
     bottom: 35%;
 }
