@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="l">
+    <link rel="stylesheet" href="asset/css/style.css">
+    <script src="https://kit.fontawesome.com/175fa63f91.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>LA MANU-CROISIÈRE</title>
+</head>
+<body>
+
+    <header>
+        <div class="logo"></div>
+        <!-------nouveau slider en bootstrap------->
+        <div id="" class="container-exp">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" id="btnSlide-1" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" id="btnSlide-2" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" id="btnSlide-3" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" id="btnSlide-4" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                <div  class="carousel-inner">
+                  <div id="slide-1" class="carousel-item active">
+                  </div>
+                  <div id="slide-2" class="carousel-item">
+                  </div>
+                  <div id="slide-3" class="carousel-item">
+                  </div>
+                  <div id="slide-4" class="carousel-item">
+                  </div>
+                </div>
+
+              </div>
+        </div>
+        <h1 id="h1">Voyagez avec le Manuela</h1>
+        <!-------------boutton moche------------->
+        <div id="BRV" class="w-100 d-none d-md-block ">
+            <form action="choixVoyage" id="choixVoyage" class=" d-flex justify-content-center">
+                    <div id="BRV1" class="col-2 BRVC">
+                        <label for="destination"><i class="fas fa-map-marker-alt"></i> Où allez-vous ?</label>
+                        <input name="color" id="destination" class="w-75" list="destinations">
+                    </div>
+                    <div id="BRV2"  class="col-2 mx-4 BRVC">
+                        <label for="date"><i class="far fa-calendar-alt"></i> Quand  ?</label>
+                        <input type="date" name="date" class="w-75">
+                    </div>
+                    <div class="col-2 BRVC">
+                        <label for="combien"><i class="fas fa-user-friends"></i> Avec qui ?</label>
+                        <input type="number" name="combien" class="w-75">
+                        
+                    </div>
+                    <div class="col-1"></div>
+                    <div class="col-2">
+                        <button id="RechercheButton" type="submit" class="w-100 h-100"><i class="fas fa-search-location"></i> Rechercher</button>
+                    </div>
+            </form>
+        </div>
+        <datalist id="destinations">
+            <option>Barcelone</option>
+            <option>Venise</option>
+            <option>Nice</option>
+        </datalist>
+    </header>
+
+
+    <!--Navigation----------------------------------------------------------------------------------------->
+    <nav class="navbar navbar-expand-md navbar-dark navbarColor">
+        <div class="container-fluid">
+            
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span> <!--icône menu burger-->
+          </button> <!--passage en menu burger-->
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+              
+                <ul class="navbar-nav mb-2 fs-4">
+                <li class="nav-item mx-4">
+                    <a class="nav-link text-light" href="#">Accueil</a>
+                </li>
+                <li class="nav-item mx-4">
+                    <a class="nav-link text-light" href="#">Offres</a>
+                </li>
+                <li class="nav-item mx-4">
+                    <a class="nav-link text-light" href="#">Destinations</a>
+                </li>
+                <li class="nav-item mx-4">
+                    <a class="nav-link text-light" href="#">Voyager avec le Manuela</a>
+                </li>
+                <li class="nav-item mx-4">
+                    <a class="nav-link text-light" href="#">Contact</a>
+                </li>
+                </ul>
+            
+          </div>
+        </div>
+      </nav>
+
+    <h2 class="text-center">Nos Avis Clients</h2>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col ">
+                <img src="https://www.starcroisieres.com/img/reviews/1.png" alt="François R." />
+                <p>François R.</p>
+                <p>01/10/2020</p>
+                <p>Nous sommes passés par la Manu croisière pour notre projet de Croisière en Méditerrannée au départ de Barcelone le 31 août 2019. C’est avec Laurent que nous avons établi contact. Il a été vraiment très professionnel, que ce soit pour sa disponibilité, sa compréhension et son sens du service, que pour son amabilité et surtout sa super proposition commerciale et finalisé notre voyage sur le MSC Orchestra.</p>
+            </div>
+            <div class="col">
+                <img src="https://www.starcroisieres.com/img/reviews/4.png" alt="Roland M." />
+                <p>Roland M.</p>
+                <p>06/06/2020</p>
+                <p>Les contacts et les conseils de Massimo ont tous été cohérents, judicieux et tout à fait ce que l'on peut attendre d'un conseiller spécialisé. Merci à l'équipe Star Croisière</p>
+            </div>
+
+            <div class="col">
+                <img src="https://www.starcroisieres.com/img/reviews/3.png" alt="Cendrine F." />
+                <p>Cendrine F.</p>
+                <p>04/06/2020</p>
+                <p>Efficacité, rapidité, disponibilité sont les mots qui correspondent à l'équipe de la Manu croisière. Léa, notre conseillère a su répondre efficacement à notre recherche et nous la remercions vivement! Faire le bonheur de ses clients est son objectif, alors MERCI Léa!</p>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col">
+                <img src="https://www.starcroisieres.com/img/reviews/2.png" alt="Anthony H." />
+                <p>Anthony H.</p>
+                <p>01/06/2020</p>
+                <p>Merci Léa, superbe accueil, attentionnée, à l'écoute, des explications claires et beaucoup de bonne humeur. C'était un plaisir ! Bonne continuation à vous et à toute l'équipe.</p>
+            </div>
+            <div class="col">
+                <img src="https://www.starcroisieres.com/img/reviews/6.png" alt="Béatrice B." />
+                <p>Béatrice B.</p>
+                <p>06/04/2020</p>
+                <p>Bonjour, Je viens de réserver ma 2 ème croisière avec la Manu croisière. Merci Laurent car il a été patient, accueillant, persévérant et très réactif. .. je n'oublie pas  Thomas de ma 1ère croisière qui a été bon aussi. . C'est une équipe agréable et professionnelle... Merci de réserver un aussi bon accueil à mes amis et collegues qui vous appelleront de ma part... je vous fait confiance pour ça ! ! MSC PREZIOSA me revoici !!!!!</p>
+            </div>
+            <div class="col">
+                <img src="https://www.starcroisieres.com/img/reviews/5.png" alt="Sandra H." />
+                <p>Sandra H.</p>
+                <p>06/11/2020</p>
+                <p>Même si je suis à plus de 8000km de votre agence, ma conseillère Marie a su me mettre suffisamment en confiance l'année dernière pour que je revienne encore cette année pour notre futur projet de croisière. Merci Marie pour votre accueil , votre sens de l'humour et votre professionnalisme afin de nous permettre de trouver la croisière qui nous convient totalement. L'année prochaine nous reviendrons!</p>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <section class="f Material-contact-section section-padding section-dark text-light py-3 pb-5">
+            <div class="container">
+                <div class="row">
+                    <!-- Section Titile -->
+                    <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">                       
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Section Titile -->
+                    <div class="col-md-6 mt-3 contact-widget-section2 wow animated fadeInLeft" data-wow-delay=".2s">
+                        <h2 class="section-title text-light pb-2">Nous avons hâte de vous retrouver !</h2>
+                      <p class="me-3">Si vous hésitez encore à partir ou bien que votre destination est déjà choisie, nous restons à votre disposition pour toutes les questions que vous pourriez vous poser. Nous avons hâte de voyager en votre compagnie.</p>
+                      <div class="find-widget">
+                        <p>Adresse : 1435 Boulevard Cambronne 60400 Noyon</p>
+                      </div>
+                      <div class="find-widget">
+                        <P>Téléphone : 03 40 78 94 14</P>
+                      </div>
+                    </div>
+                    <!-- contact form -->
+                    <div class="col-md-6 wow animated fadeInRight pt-3" data-wow-delay=".2s">
+                        <form class="shake" role="form" method="post" id="contactForm" name="contact-form" data-toggle="validator">
+                            <!-- Name -->
+                            <div class="form-group label-floating">
+                              <label class="control-label" for="name">Nom</label>
+                              <input class="form-control" id="name" type="text" name="name" required data-error="Please enter your name">
+                              <div class="help-block with-errors"></div>
+                            </div>
+                            <!-- email -->
+                            <div class="form-group label-floating">
+                              <label class="control-label" for="email">Email</label>
+                              <input class="form-control" id="email" type="email" name="email" required data-error="Please enter your Email">
+                              <div class="help-block with-errors"></div>
+                            </div>
+                            <!-- Subject -->
+                            <div class="form-group label-floating">
+                              <label class="control-label">Objet</label>
+                              <input class="form-control" id="msg_subject" type="text" name="subject" required data-error="Please enter your message subject">
+                              <div class="help-block with-errors"></div>
+                            </div>
+                            <!-- Message -->
+                            <div class="form-group label-floating">
+                                <label for="message" class="control-label">Message</label>
+                                <textarea class="form-control" rows="3" id="message" name="message" required data-error="Write your message"></textarea>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <!-- Form Submit -->
+                            <div class="form-submit mt-3">
+                                <button class="colorb btn btn-common text-light" type="submit" id="form-submit"><i class="material-icons mdi mdi-message-outline"></i>Envoyer</button>
+                                <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+          </section>
+    </div>
+
+    <footer id="mainFooter" class="pt-3 d-flex align-items-center">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <ul>
+                        <li><a href="#">Mentions Légales</a></li>
+                        <li><a href="#">Copyright</a></li>
+                        <li><a href="">Crédits</a></li>
+                        <li><a href="">Politique</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4">
+                        <div id="reseau" class="col d-flex justify-content-center align-items-center">
+                            <i class="fab fa-instagram "></i>
+                            <i class="fab fa-linkedin-in mx-2"></i>
+                            <i class="fab fa-facebook-f"></i>
+                            <i class="fab fa-twitter mx-2"></i>
+                        </div>
+                        <div class="d-flex align-items-end justify-content-center">
+                            <p><i class="fas fa-lock mt-5"></i> Certificat de sécurité</p>
+                        </div>
+                </div>
+                <div id="mPay" class="col-12 col-md-4">
+                    <ul>
+                        <li>Moyens de payement :</li>
+                        <li><a href="#"><i class="fab fa-cc-visa"></i>Visa</a></li>
+                        <li><a href="#"><i class="fab fa-paypal "></i>Paypal</a></li>
+                        <li><a href="#"><i class="fab fa-cc-mastercard"></i>MASTERCARD</a></li>
+                    </ul>
+                </div>
+            </div>
+    
+        </div>
+    </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+<script src="asset/js/main.js"></script>
+</body>
+
+</html>
