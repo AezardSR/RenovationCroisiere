@@ -14,7 +14,8 @@ header h1 {
     position: absolute;
     top: 40%;
     left: 12%;
-    color: #095aaa;
+    color: #095aaa
+    /*#B20000*/;
     text-shadow: 5px 5px 5px rgba(235, 225, 225, 0.637);
 }
 
