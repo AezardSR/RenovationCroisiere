@@ -12,17 +12,6 @@ btnRecheche.onmouseover = function() {changeButton()}
 btnRecheche.onmouseout = function() {resetColor()}
 
 
-
-let formSubmit;
-
-formSubmit = document.getElementById('form-submit');
-
-formSubmit.onclick = function() {
-    alert('Votre message a bien été envoyé ;)');
-}
-
-
-
 let slide1;
 let slide2;
 let slide3;
@@ -50,3 +39,4 @@ function test(){
 }
 
 var timer = setInterval("test()", 250);
+

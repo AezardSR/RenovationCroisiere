@@ -1,63 +1,62 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Votre croisière à portée de main">
     <link rel="stylesheet" href="asset/css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    
     <script src="https://kit.fontawesome.com/175fa63f91.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <title>LA MANU-CROISIÈRE</title>
 </head>
-<body>
 
+<body>
     <header>
         <div class="logo"></div>
         <!-------nouveau slider en bootstrap------->
         <div id="" class="container-exp">
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
-                  <button type="button" id="btnSlide-1" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" id="btnSlide-2" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" id="btnSlide-3" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                  <button type="button" id="btnSlide-4" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <button type="button" id="btnSlide-1" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" id="btnSlide-2" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" id="btnSlide-3" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" id="btnSlide-4" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
                 </div>
-                <div  class="carousel-inner">
-                  <div id="slide-1" class="carousel-item active">
-                  </div>
-                  <div id="slide-2" class="carousel-item">
-                  </div>
-                  <div id="slide-3" class="carousel-item">
-                  </div>
-                  <div id="slide-4" class="carousel-item">
-                  </div>
+                <div class="carousel-inner">
+                    <div id="slide-1" class="carousel-item active">
+                    </div>
+                    <div id="slide-2" class="carousel-item">
+                    </div>
+                    <div id="slide-3" class="carousel-item">
+                    </div>
+                    <div id="slide-4" class="carousel-item">
+                    </div>
                 </div>
 
-              </div>
+            </div>
         </div>
         <h1 id="h1">Voyagez avec le Manuela</h1>
         <!-------------boutton moche------------->
         <div id="BRV" class="w-100 d-none d-md-block ">
             <form action="choixVoyage" id="choixVoyage" class=" d-flex justify-content-center">
-                    <div id="BRV1" class="col-2 BRVC">
-                        <label for="destination"><i class="fas fa-map-marker-alt"></i> Où allez-vous ?</label>
-                        <input name="color" id="destination" class="w-75" list="destinations">
-                    </div>
-                    <div id="BRV2"  class="col-2 mx-4 BRVC">
-                        <label for="date"><i class="far fa-calendar-alt"></i> Quand  ?</label>
-                        <input type="date" name="date" class="w-75">
-                    </div>
-                    <div class="col-2 BRVC">
-                        <label for="combien"><i class="fas fa-user-friends"></i> Avec qui ?</label>
-                        <input type="number" name="combien" class="w-75">
-                        
-                    </div>
-                    <div class="col-1"></div>
-                    <div class="col-2">
-                        <button id="RechercheButton" type="submit" class="w-100 h-100"><i class="fas fa-search-location"></i> Rechercher</button>
-                    </div>
+                <div id="BRV1" class="col-2 BRVC">
+                    <label for="destination"><i class="fas fa-map-marker-alt"></i> Où allez-vous ?</label>
+                    <input name="color" id="destination" class="w-75" list="destinations">
+                </div>
+                <div id="BRV2" class="col-2 mx-4 BRVC">
+                    <label for="date"><i class="far fa-calendar-alt"></i> Quand ?</label>
+                    <input type="date" name="date" class="w-75">
+                </div>
+                <div class="col-2 BRVC">
+                    <label for="combien"><i class="fas fa-user-friends"></i> Avec qui ?</label>
+                    <input type="number" name="combien" class="w-75">
+                </div>
+                <div class="col-1"></div>
+                <div class="col-2">
+                    <button id="RechercheButton" type="submit" class="w-100 h-100"><i class="fas fa-search-location"></i> Rechercher</button>
+                </div>
             </form>
         </div>
         <datalist id="destinations">
@@ -71,196 +70,211 @@
     <!--Navigation----------------------------------------------------------------------------------------->
     <nav class="navbar navbar-expand-md navbar-dark navbarColor">
         <div class="container-fluid">
-            
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span> <!--icône menu burger-->
-          </button> <!--passage en menu burger-->
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-              
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                <!--icône menu burger-->
+            </button>
+            <!--passage en menu burger-->
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                 <ul class="navbar-nav mb-2 fs-4">
-                <li class="nav-item mx-4">
-                    <a class="nav-link text-light" href="#">Accueil</a>
-                </li>
-                <li class="nav-item mx-4">
-                    <a class="nav-link text-light" href="#">Offres</a>
-                </li>
-                <li class="nav-item mx-4">
-                    <a class="nav-link text-light" href="#">Destinations</a>
-                </li>
-                <li class="nav-item mx-4">
-                    <a class="nav-link text-light" href="#">Voyager avec le Manuela</a>
-                </li>
-                <li class="nav-item mx-4">
-                    <a class="nav-link text-light" href="#">Contact</a>
-                </li>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link text-light" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link text-light" href="#">Offres</a>
+                    </li>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link text-light" href="#">Destinations</a>
+                    </li>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link text-light" href="#">Voyager avec le Manuela</a>
+                    </li>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link text-light" href="form.html">Contact</a>
+                    </li>
                 </ul>
-            
-          </div>
+            </div>
         </div>
-      </nav>
+    </nav>
 
     <!---------------Navigation--------------------------------------------------------------------------------------->
 
-    
-    <!-----Introduction------------->   
-        <div class="text-center p-5">
-            <h2 class="fw-bold">La Manu Croisière</h2>
-            <p class="fs-5">La Manu Croisière est une société de croisière qui à été crée en 2020, elle dispose de 10 navires différents. Le nom du navire le plus grand est le Manuela qui à une capacité d'accueil de 10 000 à 20 000 personnes. Les différents navires disposent de nombreuses chambres de luxe avec balcon.L'équipage compte entre 3 000 à 10 000 personnes selon le type de navire choisie. La Manu Croisière vous propose principalement des destinations autour de la mer méditérannée. Le Manuella est le navire choisi pour la prochaine destination car c'est le plus grand navire il mesure 450 métres et possédent de nombreuses activités. Le commandant de bord se prénomme Eddy. Embarquez pour un séjour de rêve à bord du Manuela.
-            </p>
-        </div>
-        
+    <!-----Introduction------------->
+    <div class="text-center p-5">
+        <h2 class="fw-bold">La Manu Croisière</h2>
+        <p class="fs-5">La Manu Croisière est une société de croisière qui à été crée en 2020, elle dispose de 10
+            navires différents. Le nom du navire le plus grand est le Manuela qui à une capacité d'accueil de 10 000 à
+            20 000 personnes. Les différents navires disposent de nombreuses chambres de luxe avec balcon.L'équipage
+            compte entre 3 000 à 10 000 personnes selon le type de navire choisie. La Manu Croisière vous propose
+            principalement des destinations autour de la mer méditérannée. Le Manuella est le navire choisi pour la
+            prochaine destination car c'est le plus grand navire il mesure 450 métres et possédent de nombreuses
+            activités. Le commandant de bord se prénomme Eddy. Embarquez pour un séjour de rêve à bord du Manuela.
+        </p>
+    </div>
 
-<!--Deuxième slider-->
+    <!--Deuxième slider-->
     <div class="container">
         <div class="col pb-5">
             <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
                 <div class="carousel-inner">
-                <div id="slided2-1" class="carousel-item active">
-                </div>
-                <div id="slided2-2" class="carousel-item">
-                </div>
-                <div id="slided2-3" class="carousel-item">
-                </div>
-                <div id="slided2-4" class="carousel-item">
-                </div>
+                    <div id="slided2-1" class="carousel-item active">
+                    </div>
+                    <div id="slided2-2" class="carousel-item">
+                    </div>
+                    <div id="slided2-3" class="carousel-item">
+                    </div>
+                    <div id="slided2-4" class="carousel-item">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-<!-----------------Bloc d'articles-------------------->
-<div class="container">
-    <h2 class="text-center fw-bold fst-italic p-3 pt-5">Notre cure thermale</h2>
-    <div class="row border border-3 border-primary p-3 mb-3">   
-        <article class="col-12 col-md-4 text-center">
-            <img src="asset/img/detente.jpg" class="pt-3" style="width: 95%; height: 250px; background-size: cover;" alt="">
-            <h3 class="pt-2">Espace thermal</h3>
-            <p class="px-2"> Vous pouvez bénéficier pendant votre séjour sur le Manuela des bienfaits du hammam et du spa. Vous serez totalement détendu grace aux bienfaits des jets à haute pression.</p>
-        </article>       
-        <article class="col-12 col-md-4 text-center">
-            <img src="asset/img/massage.jpg" class="pt-3" style="width: 95%; height: 250px" alt="">
-            <h3 class="pt-2">Massages aux huiles essentielles</h3>            
-            <p class="px-2">Pendant votre séjour vous pouvez profiter des bienfaits de la cure thermale en profitant d'un agréable massage aux huiles essentielles.</p>
-        </article>        
-        <article class="col-12 col-md-4 text-center">
-            <img src="asset/img/serviette.jpg" class="pt-3" style="width: 95%; height: 250px" alt="">
-            <h3 class="pt-2">Espace détente</h3>
-            <p class="px-2"> Aprés avoir été au spa hamman et fait le massage aux huiles essentielles, venez profiter du magnifique coin détente à bord du Manuela pour un apaisement totale.</p>
-        </article>            
-    </div>
-    
-    <!--deuxieme bloc d'articles-->   
-
-    <h2 class="text-center fw-bold fst-italic p-3 pt-5">Notre Oratario</h2>    
-    <div class="row border border-3 border-primary p-3 mb-3">    
-        <article class="col-12 col-md-4 text-center">
-            <img src="asset/img/auditorium-86197_1920.jpg" class="pt-3" style="width: 95%; height: 250px" alt="">
-            <h3 class="pt-2"> Thêatre </h3>
-            <p class="px-2"> Pendant votre croisiére plusieurs représentations thêatrales ont lieu la journée ainsi que le soir.Isabelle Adjani à eu l'occasion de faire une représentation sur le Manuella.</p>
-        </article>    
-        <article class="col-12 col-md-4 text-center">
-            <img src="asset/img/opera-594592_1920.jpg" class="pt-3" style="width: 95%; height: 250px" alt="">
-            <h3 class="pt-2"> Opéra </h3>
-            <p class="px-2"> Lors de votre croisiére vous pouvez également profiter de l'opéra qui à une capacité d'acceuil de 10 000 personnes. La Traviata est venue à plusieurs reprises faire des représentations sur le Manuella.</p>
-        </article>    
-        <article class="col-12 col-md-4 text-center">
-            <img src="asset/img/violins-1838390_1920.jpg" class="pt-3" style="width: 95%; height: 250px" alt="">
-            <h3 class="pt-2"> Orchestre</h3>
-            <p class="px-2"> Un orchestre vous ai également proposé pendant votre séjour sur le Manuella. Cet orchestre propose du rock du tango ainsi que de la valse. André Rieu ainsi que Catherine Lara sont venus faire quelques représentations sur le Manuella.</p>
-        </article>
-    </div>
-    
-    <!--ceci est le 3eme bloc d'articles-->   
-
-    <h2 class="text-center fw-bold fst-italic p-3 pt-5">Nos activités sportives</h2>    
-    <div class="row border border-3 border-primary p-3 mb-3">    
-        <article class="col-12 col-md-4 text-center">
-            <img src="asset/img/aquagym.jpg" class="pt-3" style="width: 95%; height: 250px; background-size: cover;" alt="">
-            <h3 class="pt-2">Aquagym</h3>
-            <p class="px-2">De nombreuses variantes des cours d'aquagym vous seront proposés sur notre bateau de croisière.
-                D'une piscine à une autre, d'un maître nageur à l'autre, les exercices proposés seront très différents.</p>
-        </article>    
-        <article class="col-12 col-md-4 text-center">
-            <img src="asset/img/salle-de-sport.jpg" class="pt-3" style="width: 95%; height: 250px; background-size: cover;" alt="">
-            <h3 class="pt-2">Salle de sport</h3>
-            <p class="px-2">Si vous êtes sportif, nos navires de croisière et leur salle de sport avec vue sur la mer vous attendent avec les appareils de fitness les plus modernes</p>
-        </article>     
-        <article class="col-12 col-md-4 text-center">
-            <img src="asset/img/danse.jpg" class="pt-3" style="width: 95%; height: 250px; background-size: contain;" alt="">
-            <h3 class="pt-2">Cours de danse / Zumba</h3>
-            <p class="px-2">Avec Philippe et Marie-Line, professeurs passionnés, vous pourrez découvrir ou vous perfectionner dans la pratique de nombreuses danses, à travers le "Style Dancing"</p>
-        </article>
-    </div>  
-
-    <!--ceci est le dernier bloc d'articles avec le casino-->
-   
-    <h2 class="text-center fw-bold fst-italic p-3 pt-5">Le casino</h2>    
-    <div class="row border border-3 border-primary p-3 mb-3">        
-        <article class="col-12 col-md-4 text-center">            
-            <img src="asset/img/roulette.jpg" class="pt-3" style="width: 95%; height: 250px; background-size: cover;" alt="">
-            <h3 class="pt-2">Jeux de hasard</h3>
-            <p class="px-2">La roulette est un classique de notre casino.
-                Ce jeu est extrêmement prisé par nos clients et a déjà vu passer de célèbres célébrités comme : Johnny hallyday, snoop dogg etc.</p>
-        </article>   
-        <article class="col-12 col-md-4 text-center">
-            <img src="asset/img/gambling-602976_1920.jpg" class="pt-3" style="width: 95%; height: 250px; background-size: cover;" alt="">
-            <h3 class="pt-2">Machines à sous</h3>
-            <p class="px-2">Nos machines à sous sont prêt à l'emploi, et entièrement disponible pour toute la durée de votre séjour.
-                La chance vous réussira peut-être ! Comme l'un de nos derniers clients qui a remporté un jolie packtole de 10000€</p>
-        </article>   
-        <article class="col-12 col-md-4 text-center">
-            <img src="asset/img/cartecasino.jpg" class="pt-3" style="width: 95%; height: 250px; background-size: cover;" alt="">
-            <h3 class="pt-2">Jeux de carte</h3>
-            <p class="px-2">Poker ! Blackjack ! À nos tables vous aurez la joie de voir notre croupier expert vous servir et vous sourire, il répondra à toutes vos attentes sans la moindre hésitation.</p>
-        </article>
-    </div>  
-</div>
-<!--Fin des articles-->
-
-<!--Logos bas de page-->
-<div id="services" class="container text-center py-5">
-    <div class="row pb-4">
-        <div class="col">
-            <h2 class="">INCLUS DANS TOUTES NOS CROISIÈRES</h2>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <i class="fas fa-utensils"></i>
-            <p>Restaurant à la carte et vaste buffet</p>
-        </div>
-        <div class="col">
-            <i class="fas fa-users"></i> 
-            <p>Activités familiales</p>
-        </div>
-        <div class="col">
-            <i class="fas fa-shield-alt"></i>
-            <p>Mesures de santé et de sécurité renforcées</p>
-        </div>
-        <div class="col">
-            <i class="fas fa-basketball-ball"></i>
-            <p>Équipements de dernières génération</p>
-        </div>
-        <div class="col">
-            <i class="fas fa-theater-masks"></i>
-            <p>Divertissements de classe mondiale</p>
-        </div>
-    </div>
-</div>
-
-<footer id="mainFooter" class="pt-3 d-flex align-items-center">
-
+    <!-----------------Bloc d'articles-------------------->
     <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-4">
-                <ul>
-                    <li><a href="#">Mentions Légales</a></li>
-                    <li><a href="#">Copyright</a></li>
-                    <li><a href="">Crédits</a></li>
-                    <li><a href="">Politique</a></li>
-                </ul>
+        <h2 class="text-center fw-bold fst-italic p-3 pt-5">Notre cure thermale</h2>
+        <div class="row border border-3 border-primary p-3 mb-3">
+            <article class="col-12 col-md-4 text-center">
+                <img src="asset/img/detente.jpg" class="pt-3" style="width: 95%; height: 250px; background-size: cover;"
+                    alt="">
+                <h3 class="pt-2">Espace thermal</h3>
+                <p class="px-2"> Vous pouvez bénéficier pendant votre séjour sur le Manuela des bienfaits du hammam et
+                    du spa. Vous serez totalement détendu grace aux bienfaits des jets à haute pression.</p>
+            </article>
+            <article class="col-12 col-md-4 text-center">
+                <img src="asset/img/massage.jpg" class="pt-3" style="width: 95%; height: 250px" alt="">
+                <h3 class="pt-2">Massages aux huiles essentielles</h3>
+                <p class="px-2">Pendant votre séjour vous pouvez profiter des bienfaits de la cure thermale en profitant
+                    d'un agréable massage aux huiles essentielles.</p>
+            </article>
+            <article class="col-12 col-md-4 text-center">
+                <img src="asset/img/serviette.jpg" class="pt-3" style="width: 95%; height: 250px" alt="">
+                <h3 class="pt-2">Espace détente</h3>
+                <p class="px-2"> Aprés avoir été au spa hamman et fait le massage aux huiles essentielles, venez
+                    profiter du magnifique coin détente à bord du Manuela pour un apaisement totale.</p>
+            </article>
+        </div>
+
+        <!--deuxieme bloc d'articles-->
+
+        <h2 class="text-center fw-bold fst-italic p-3 pt-5">Notre Oratario</h2>
+        <div class="row border border-3 border-primary p-3 mb-3">
+            <article class="col-12 col-md-4 text-center">
+                <img src="asset/img/auditorium-86197_1920.jpg" class="pt-3" style="width: 95%; height: 250px" alt="">
+                <h3 class="pt-2"> Thêatre </h3>
+                <p class="px-2"> Pendant votre croisiére plusieurs représentations thêatrales ont lieu la journée ainsi
+                    que le soir.Isabelle Adjani à eu l'occasion de faire une représentation sur le Manuella.</p>
+            </article>
+            <article class="col-12 col-md-4 text-center">
+                <img src="asset/img/opera-594592_1920.jpg" class="pt-3" style="width: 95%; height: 250px" alt="">
+                <h3 class="pt-2"> Opéra </h3>
+                <p class="px-2"> Lors de votre croisiére vous pouvez également profiter de l'opéra qui à une capacité
+                    d'acceuil de 10 000 personnes. La Traviata est venue à plusieurs reprises faire des représentations
+                    sur le Manuella.</p>
+            </article>
+            <article class="col-12 col-md-4 text-center">
+                <img src="asset/img/violins-1838390_1920.jpg" class="pt-3" style="width: 95%; height: 250px" alt="">
+                <h3 class="pt-2"> Orchestre</h3>
+                <p class="px-2"> Un orchestre vous ai également proposé pendant votre séjour sur le Manuella. Cet
+                    orchestre propose du rock du tango ainsi que de la valse. André Rieu ainsi que Catherine Lara sont
+                    venus faire quelques représentations sur le Manuella.</p>
+            </article>
+        </div>
+
+        <!--ceci est le 3eme bloc d'articles-->
+
+        <h2 class="text-center fw-bold fst-italic p-3 pt-5">Nos activités sportives</h2>
+        <div class="row border border-3 border-primary p-3 mb-3">
+            <article class="col-12 col-md-4 text-center">
+                <img src="asset/img/aquagym.jpg" class="pt-3" style="width: 95%; height: 250px; background-size: cover;"
+                    alt="">
+                <h3 class="pt-2">Aquagym</h3>
+                <p class="px-2">De nombreuses variantes des cours d'aquagym vous seront proposés sur notre bateau de croisière. D'une piscine à une autre, d'un maître nageur à l'autre, les exercices proposés seront très différents.</p>
+            </article>
+            <article class="col-12 col-md-4 text-center">
+                <img src="asset/img/salle-de-sport.jpg" class="pt-3"
+                    style="width: 95%; height: 250px; background-size: cover;" alt="">
+                <h3 class="pt-2">Salle de sport</h3>
+                <p class="px-2">Si vous êtes sportif, nos navires de croisière et leur salle de sport avec vue sur la mer vous attendent avec les appareils de fitness les plus modernes</p>
+            </article>
+            <article class="col-12 col-md-4 text-center">
+                <img src="asset/img/danse.jpg" class="pt-3" style="width: 95%; height: 250px; background-size: contain;"
+                    alt="">
+                <h3 class="pt-2">Cours de danse / Zumba</h3>
+                <p class="px-2">Avec Philippe et Marie-Line, professeurs passionnés, vous pourrez découvrir ou vous perfectionner dans la pratique de nombreuses danses, à travers le "Style Dancing"</p>
+            </article>
+        </div>
+
+        <!--ceci est le dernier bloc d'articles avec le casino-->
+
+        <h2 class="text-center fw-bold fst-italic p-3 pt-5">Le casino</h2>
+        <div class="row border border-3 border-primary p-3 mb-3">
+            <article class="col-12 col-md-4 text-center">
+                <img src="asset/img/roulette.jpg" class="pt-3"
+                    style="width: 95%; height: 250px; background-size: cover;" alt="">
+                <h3 class="pt-2">Jeux de hasard</h3>
+                <p class="px-2">La roulette est un classique de notre casino. Ce jeu est extrêmement prisé par nos clients et a déjà vu passer de célèbres célébrités comme : Johnny hallyday, snoop dogg etc.</p>
+            </article>
+            <article class="col-12 col-md-4 text-center">
+                <img src="asset/img/gambling-602976_1920.jpg" class="pt-3"
+                    style="width: 95%; height: 250px; background-size: cover;" alt="">
+                <h3 class="pt-2">Machines à sous</h3>
+                <p class="px-2">Nos machines à sous sont prêt à l'emploi, et entièrement disponible pour toute la durée de votre séjour. La chance vous réussira peut-être ! Comme l'un de nos derniers clients qui a remporté un jolie packtole de 10000€</p>
+            </article>
+            <article class="col-12 col-md-4 text-center">
+                <img src="asset/img/cartecasino.jpg" class="pt-3"
+                    style="width: 95%; height: 250px; background-size: cover;" alt="">
+                <h3 class="pt-2">Jeux de carte</h3>
+                <p class="px-2">Poker ! Blackjack ! À nos tables vous aurez la joie de voir notre croupier expert vous servir et vous sourire, il répondra à toutes vos attentes sans la moindre hésitation.</p>
+            </article>
+        </div>
+    </div>
+    <!--Fin des articles-->
+
+    <!--Logos bas de page-->
+    <div id="services" class="container text-center py-5">
+        <div class="row pb-4">
+            <div class="col">
+                <h2 class="">INCLUS DANS TOUTES NOS CROISIÈRES</h2>
             </div>
-            <div class="col-12 col-md-4">
+        </div>
+        <div class="row">
+            <div class="col">
+                <i class="fas fa-utensils"></i>
+                <p>Restaurant à la carte et vaste buffet</p>
+            </div>
+            <div class="col">
+                <i class="fas fa-users"></i>
+                <p>Activités familiales</p>
+            </div>
+            <div class="col">
+                <i class="fas fa-shield-alt"></i>
+                <p>Mesures de santé et de sécurité renforcées</p>
+            </div>
+            <div class="col">
+                <i class="fas fa-basketball-ball"></i>
+                <p>Équipements de dernières génération</p>
+            </div>
+            <div class="col">
+                <i class="fas fa-theater-masks"></i>
+                <p>Divertissements de classe mondiale</p>
+            </div>
+        </div>
+    </div>
+    <footer id="mainFooter" class="pt-3 d-flex align-items-center">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <ul>
+                        <li><a href="#">Mentions Légales</a></li>
+                        <li><a href="#">Copyright</a></li>
+                        <li><a href="">Crédits</a></li>
+                        <li><a href="">Politique</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4">
                     <div id="reseau" class="col d-flex justify-content-center align-items-center">
                         <i class="fab fa-instagram "></i>
                         <i class="fab fa-linkedin-in mx-2"></i>
@@ -270,20 +284,20 @@
                     <div class="d-flex align-items-end justify-content-center">
                         <p><i class="fas fa-lock mt-5"></i> Certificat de sécurité</p>
                     </div>
-            </div>
-            <div id="mPay" class="col-12 col-md-4">
-                <ul>
-                    <li>Moyens de payement :</li>
-                    <li><a href="#"><i class="fab fa-cc-visa"></i>Visa</a></li>
-                    <li><a href="#"><i class="fab fa-paypal "></i>Paypal</a></li>
-                    <li><a href="#"><i class="fab fa-cc-mastercard"></i>MASTERCARD</a></li>
-                </ul>
+                </div>
+                <div id="mPay" class="col-12 col-md-4">
+                    <ul>
+                        <li>Moyens de payement :</li>
+                        <li><a href="#"><i class="fab fa-cc-visa"></i>Visa</a></li>
+                        <li><a href="#"><i class="fab fa-paypal "></i>Paypal</a></li>
+                        <li><a href="#"><i class="fab fa-cc-mastercard"></i>MASTERCARD</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-
-    </div>
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-<script src="asset/js/main.js"></script>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="asset/js/main.js"></script>
 </body>
+
 </html>
